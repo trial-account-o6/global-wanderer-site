@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Wanderer - Explore the World</title>
+    <meta name="description" content="Discover breathtaking destinations around the world. Your next adventure starts here with Global Wanderer.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#0284c7',
+                        accent: '#38bdf8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+        }
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur bg-white/90 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl">🌍</span>
+                    <span class="text-xl font-bold text-gray-800">Global Wanderer</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary font-medium">Home</a>
+                    <a href="destinations.html" class="text-gray-600 hover:text-primary transition-colors">Destinations</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-primary font-medium">Home</a>
+                <a href="destinations.html" class="block py-2 text-gray-600 hover:text-primary">Destinations</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                Discover Your Next<br>
+                <span class="text-yellow-300">Adventure</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-10 max-w-2xl mx-auto">
+                Explore breathtaking destinations around the world. Your journey of a lifetime starts here.
+            </p>
+            <a href="destinations.html" class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-full text-lg hover:bg-yellow-300 hover:text-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Start Exploring →
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Destinations</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Handpicked locations that promise unforgettable experiences</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Paris Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop" alt="Paris, France" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Paris</h3>
+                            <span class="text-2xl">🇫🇷</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The City of Light awaits with its iconic Eiffel Tower, world-class art, and romantic boulevards.</p>
+                        <a href="destinations.html" class="text-primary font-medium hover:text-secondary transition-colors">Explore Paris →</a>
+                    </div>
+                </div>
+
+                <!-- Tokyo Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop" alt="Tokyo, Japan" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Tokyo</h3>
+                            <span class="text-2xl">🇯🇵</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Where ancient temples meet neon-lit streets. Experience the perfect blend of tradition and innovation.</p>
+                        <a href="destinations.html" class="text-primary font-medium hover:text-secondary transition-colors">Explore Tokyo →</a>
+                    </div>
+                </div>
+
+                <!-- New York Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=400&fit=crop" alt="New York, USA" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">New York</h3>
+                            <span class="text-2xl">🇺🇸</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">The city that never sleeps. From Broadway to Central Park, discover endless possibilities.</p>
+                        <a href="destinations.html" class="text-primary font-medium hover:text-secondary transition-colors">Explore NYC →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready for Your Adventure?</h2>
+            <p class="text-blue-100 text-lg mb-8">Join thousands of travelers who have discovered their dream destinations with us.</p>
+            <a href="contact.html" class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-full text-lg hover:bg-yellow-300 hover:text-gray-800 transition-all duration-300 shadow-lg">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <span class="text-2xl">🌍</span>
+                    <span class="text-xl font-bold text-white">Global Wanderer</span>
+                </div>
+                <p class="text-sm">© 2026 Global Wanderer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Global Wanderer</title>
+    <meta name="description" content="Explore our curated collection of stunning destinations from around the world.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#0284c7',
+                        accent: '#38bdf8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+        }
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .image-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-blur bg-white/90 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl">🌍</span>
+                    <span class="text-xl font-bold text-gray-800">Global Wanderer</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+                    <a href="destinations.html" class="text-primary font-medium">Destinations</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="destinations.html" class="block py-2 text-primary font-medium">Destinations</a>
+                <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <section class="pt-24 pb-12 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Explore Destinations</h1>
+            <p class="text-blue-100 text-lg max-w-2xl mx-auto">Discover the world's most beautiful places and start planning your next adventure</p>
+        </div>
+    </section>
+
+    <!-- Destinations Gallery -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Paris -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=450&fit=crop" alt="Paris, France" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 image-overlay"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">🇫🇷 France</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Paris</h3>
+                        <p class="text-gray-600 mb-4">The City of Light captivates with the Eiffel Tower, Louvre Museum, charming cafés, and romantic Seine River cruises. Experience world-renowned cuisine and timeless architecture.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4">✈️ Best: Apr-Jun, Sep-Oct</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tokyo -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=450&fit=crop" alt="Tokyo, Japan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 image-overlay"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">🇯🇵 Japan</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Tokyo</h3>
+                        <p class="text-gray-600 mb-4">A mesmerizing blend of ultra-modern and traditional. From ancient temples to Shibuya crossing, sushi bars to cherry blossoms, Tokyo offers endless discovery.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4">✈️ Best: Mar-May, Sep-Nov</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New York -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=450&fit=crop" alt="New York, USA" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 image-overlay"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">🇺🇸 USA</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">New York</h3>
+                        <p class="text-gray-600 mb-4">The Big Apple pulses with energy. Broadway shows, Central Park, Times Square, and the Statue of Liberty—every corner tells a story in this iconic metropolis.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4">✈️ Best: Apr-Jun, Sep-Nov</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Santorini -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&h=450&fit=crop" alt="Santorini, Greece" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 image-overlay"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">🇬🇷 Greece</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Santorini</h3>
+                        <p class="text-gray-600 mb-4">White-washed buildings cascading down volcanic cliffs, stunning sunsets over the Aegean Sea, and rich Mediterranean flavors make this Greek island unforgettable.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4">✈️ Best: Apr-Oct</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=450&fit=crop" alt="Dubai, UAE" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 image-overlay"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">🇦🇪 UAE</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Dubai</h3>
+                        <p class="text-gray-600 mb-4">A futuristic oasis in the desert. Home to the world's tallest building, luxurious shopping, desert safaris, and architectural marvels that defy imagination.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4">✈️ Best: Nov-Mar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bali -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg card-hover transition-all duration-300">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=450&fit=crop" alt="Bali, Indonesia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 image-overlay"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">🇮🇩 Indonesia</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Bali</h3>
+                        <p class="text-gray-600 mb-4">The Island of the Gods offers lush rice terraces, ancient temples, pristine beaches, and a spiritual atmosphere that rejuvenates mind, body, and soul.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4">✈️ Best: Apr-Oct</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-16 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Can't Decide Where to Go?</h2>
+            <p class="text-blue-100 mb-8">Let us help you plan the perfect trip tailored to your dreams.</p>
+            <a href="contact.html" class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-full text-lg hover:bg-yellow-300 hover:text-gray-800 transition-all duration-300 shadow-lg">
+                Contact Us Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <span class="text-2xl">🌍</span>
+                    <span class="text-xl font-bold text-white">Global Wanderer</span>
+                </div>
+                <p class="text-sm">© 2026 Global Wanderer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
