@@ -9,6 +9,9 @@ A single-page travel inspiration site highlighting curated destinations, travel 
 - Call-to-action section for contacting the team
 - Footer credit acknowledging Global Wanderer and the Pi Agent builder
 
+## Live Demo
+Visit the deployed site on GitHub Pages: https://trial-account-o6.github.io/global-wanderer-site/
+
 ## Local Development
 1. Clone the repository and install any desired tooling (the page depends only on CDN resources, so no build step is required).
 2. Open `index.html` in your browser or run a simple static server:
